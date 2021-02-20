@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E5031E52E27A4759C377A5 /* Pods_Rocketpedia_RocketpediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41CD102381D9979C0586621 /* Pods_Rocketpedia_RocketpediaUITests.framework */; };
+		1A9D5F6525E137BB00FBF408 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D5F6425E137BB00FBF408 /* RocketCell.swift */; };
 		1AA3F19625E03157000B85EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F19525E03157000B85EC /* AppDelegate.swift */; };
 		1AA3F19825E03157000B85EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F19725E03157000B85EC /* SceneDelegate.swift */; };
 		1AA3F19A25E03157000B85EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F19925E03157000B85EC /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 		1AA3F1CD25E032F8000B85EC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F1CC25E032F8000B85EC /* AppCoordinator.swift */; };
 		1AA3F1DD25E03BD6000B85EC /* RocketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F1DC25E03BD6000B85EC /* RocketsListViewModel.swift */; };
 		1AA3F1E525E03BEC000B85EC /* RocketsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F1E425E03BEC000B85EC /* RocketsListViewController.swift */; };
+		778719B5E1E7C4476667D08F /* Pods_RocketpediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CD2CE6E64B0B8612A1E1B7 /* Pods_RocketpediaTests.framework */; };
+		FA068C6E01EBDAC3DCA958EA /* Pods_Rocketpedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2E78CA9BF7CCB7B18896E3 /* Pods_Rocketpedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164423AEE13D82C148F7F789 /* Pods-Rocketpedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocketpedia.release.xcconfig"; path = "Target Support Files/Pods-Rocketpedia/Pods-Rocketpedia.release.xcconfig"; sourceTree = "<group>"; };
+		1A9D5F6425E137BB00FBF408 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
 		1AA3F19225E03157000B85EC /* Rocketpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocketpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3F19525E03157000B85EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA3F19725E03157000B85EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +63,14 @@
 		1AA3F1CC25E032F8000B85EC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1AA3F1DC25E03BD6000B85EC /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
 		1AA3F1E425E03BEC000B85EC /* RocketsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewController.swift; sourceTree = "<group>"; };
+		44CD2CE6E64B0B8612A1E1B7 /* Pods_RocketpediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketpediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6831624FD917E6DD9AE1A56D /* Pods-Rocketpedia-RocketpediaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocketpedia-RocketpediaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rocketpedia-RocketpediaUITests/Pods-Rocketpedia-RocketpediaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E4A99C0A2F9FDBBD9ECA0D0 /* Pods-Rocketpedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocketpedia.debug.xcconfig"; path = "Target Support Files/Pods-Rocketpedia/Pods-Rocketpedia.debug.xcconfig"; sourceTree = "<group>"; };
+		88F92BC43F936A9033A748C2 /* Pods-RocketpediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketpediaTests.release.xcconfig"; path = "Target Support Files/Pods-RocketpediaTests/Pods-RocketpediaTests.release.xcconfig"; sourceTree = "<group>"; };
+		933D2ED8ED3338E58724F203 /* Pods-Rocketpedia-RocketpediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocketpedia-RocketpediaUITests.release.xcconfig"; path = "Target Support Files/Pods-Rocketpedia-RocketpediaUITests/Pods-Rocketpedia-RocketpediaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B41CD102381D9979C0586621 /* Pods_Rocketpedia_RocketpediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rocketpedia_RocketpediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2E78CA9BF7CCB7B18896E3 /* Pods_Rocketpedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rocketpedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBABA0911722F8AC61038CE /* Pods-RocketpediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketpediaTests.debug.xcconfig"; path = "Target Support Files/Pods-RocketpediaTests/Pods-RocketpediaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA068C6E01EBDAC3DCA958EA /* Pods_Rocketpedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778719B5E1E7C4476667D08F /* Pods_RocketpediaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E5031E52E27A4759C377A5 /* Pods_Rocketpedia_RocketpediaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +108,8 @@
 				1AA3F1AE25E03159000B85EC /* RocketpediaTests */,
 				1AA3F1B925E03159000B85EC /* RocketpediaUITests */,
 				1AA3F19325E03157000B85EC /* Products */,
+				E04DEE68AFB0D69136C69708 /* Pods */,
+				C565439450CE91BA371462C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,8 +203,32 @@
 		1AA3F1DB25E03B96000B85EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A9D5F6425E137BB00FBF408 /* RocketCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C565439450CE91BA371462C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB2E78CA9BF7CCB7B18896E3 /* Pods_Rocketpedia.framework */,
+				B41CD102381D9979C0586621 /* Pods_Rocketpedia_RocketpediaUITests.framework */,
+				44CD2CE6E64B0B8612A1E1B7 /* Pods_RocketpediaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E04DEE68AFB0D69136C69708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E4A99C0A2F9FDBBD9ECA0D0 /* Pods-Rocketpedia.debug.xcconfig */,
+				164423AEE13D82C148F7F789 /* Pods-Rocketpedia.release.xcconfig */,
+				6831624FD917E6DD9AE1A56D /* Pods-Rocketpedia-RocketpediaUITests.debug.xcconfig */,
+				933D2ED8ED3338E58724F203 /* Pods-Rocketpedia-RocketpediaUITests.release.xcconfig */,
+				FDBABA0911722F8AC61038CE /* Pods-RocketpediaTests.debug.xcconfig */,
+				88F92BC43F936A9033A748C2 /* Pods-RocketpediaTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AA3F1BF25E03159000B85EC /* Build configuration list for PBXNativeTarget "Rocketpedia" */;
 			buildPhases = (
+				63EA3D14D428408A5F85DAC9 /* [CP] Check Pods Manifest.lock */,
 				1AA3F18E25E03157000B85EC /* Sources */,
 				1AA3F18F25E03157000B85EC /* Frameworks */,
 				1AA3F19025E03157000B85EC /* Resources */,
+				98F7D26632CE822A589DE23E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AA3F1C225E03159000B85EC /* Build configuration list for PBXNativeTarget "RocketpediaTests" */;
 			buildPhases = (
+				C89BC9FF00AE1EE030CE7352 /* [CP] Check Pods Manifest.lock */,
 				1AA3F1A725E03159000B85EC /* Sources */,
 				1AA3F1A825E03159000B85EC /* Frameworks */,
 				1AA3F1A925E03159000B85EC /* Resources */,
@@ -230,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AA3F1C525E03159000B85EC /* Build configuration list for PBXNativeTarget "RocketpediaUITests" */;
 			buildPhases = (
+				3655329F5DD06F8E72543BE6 /* [CP] Check Pods Manifest.lock */,
 				1AA3F1B225E03159000B85EC /* Sources */,
 				1AA3F1B325E03159000B85EC /* Frameworks */,
 				1AA3F1B425E03159000B85EC /* Resources */,
+				B86C3F8CEF0A205D1472D5F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +361,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3655329F5DD06F8E72543BE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rocketpedia-RocketpediaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63EA3D14D428408A5F85DAC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rocketpedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98F7D26632CE822A589DE23E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rocketpedia/Pods-Rocketpedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rocketpedia/Pods-Rocketpedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rocketpedia/Pods-Rocketpedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B86C3F8CEF0A205D1472D5F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rocketpedia-RocketpediaUITests/Pods-Rocketpedia-RocketpediaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rocketpedia-RocketpediaUITests/Pods-Rocketpedia-RocketpediaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rocketpedia-RocketpediaUITests/Pods-Rocketpedia-RocketpediaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89BC9FF00AE1EE030CE7352 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RocketpediaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AA3F18E25E03157000B85EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -321,6 +472,7 @@
 				1AA3F1DD25E03BD6000B85EC /* RocketsListViewModel.swift in Sources */,
 				1AA3F19625E03157000B85EC /* AppDelegate.swift in Sources */,
 				1AA3F19825E03157000B85EC /* SceneDelegate.swift in Sources */,
+				1A9D5F6525E137BB00FBF408 /* RocketCell.swift in Sources */,
 				1AA3F1CD25E032F8000B85EC /* AppCoordinator.swift in Sources */,
 				1AA3F19A25E03157000B85EC /* ContentView.swift in Sources */,
 				1AA3F19D25E03157000B85EC /* Rocketpedia.xcdatamodeld in Sources */,
@@ -489,6 +641,7 @@
 		};
 		1AA3F1C025E03159000B85EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E4A99C0A2F9FDBBD9ECA0D0 /* Pods-Rocketpedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +663,7 @@
 		};
 		1AA3F1C125E03159000B85EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 164423AEE13D82C148F7F789 /* Pods-Rocketpedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -531,6 +685,7 @@
 		};
 		1AA3F1C325E03159000B85EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBABA0911722F8AC61038CE /* Pods-RocketpediaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -553,6 +708,7 @@
 		};
 		1AA3F1C425E03159000B85EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88F92BC43F936A9033A748C2 /* Pods-RocketpediaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -575,6 +731,7 @@
 		};
 		1AA3F1C625E03159000B85EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6831624FD917E6DD9AE1A56D /* Pods-Rocketpedia-RocketpediaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -595,6 +752,7 @@
 		};
 		1AA3F1C725E03159000B85EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 933D2ED8ED3338E58724F203 /* Pods-Rocketpedia-RocketpediaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

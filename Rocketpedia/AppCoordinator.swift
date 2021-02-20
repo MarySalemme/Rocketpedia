@@ -18,7 +18,6 @@ class AppCoordinator: Coordinator {
 	init(window: UIWindow) {
 		self.window = window
 		rootViewController = UINavigationController()
-		rootViewController.setNavigationBarHidden(true, animated: false)
 	}
 	
 	func start() {

@@ -6,22 +6,82 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxSwiftExt
 
 class RocketsListViewController: UIViewController {
+
+	// MARK: Subviews
+	
+	let rocketsTableView: UITableView = {
+		let tableView = UITableView()
+		tableView.backgroundColor = UIColor.systemBackground
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		return tableView
+	}()
 	
 	// MARK: Dependencies
 
 	let viewModel: RocketsListViewModel
+	
+	private let _disposeBag = DisposeBag()
 
 	// MARK: Initializers
 
 	init(viewModel: RocketsListViewModel) {
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
+		setupUI()
+		setupConstraints()
+		setupBindings()
 		print("RocketsListViewController initialized")
 	}
 
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		viewModel.inputs.viewDidAppear()
+		super.viewDidAppear(animated)
+	}
+
+	func setupUI() {
+		navigationController?.navigationBar.backgroundColor = .systemBackground
+		navigationController?.navigationBar.isTranslucent = false
+		rocketsTableView.register(RocketCell.self, forCellReuseIdentifier: "RocketCell")
+		view.addSubview(rocketsTableView)
+	}
+	
+	func setupConstraints() {
+		NSLayoutConstraint.activate([
+			rocketsTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+			rocketsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			rocketsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+			rocketsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+		])
+	}
+	
+	func setupBindings() {
+		viewModel.outputs.title
+			.drive { (value) in
+				self.title = value
+			}
+			.disposed(by: _disposeBag)
+			
+		viewModel.outputs.rockets
+			.unwrap()
+			.drive(rocketsTableView.rx.items(cellIdentifier: RocketCell.reuseIdentifier, cellType: RocketCell.self)) {
+				_, rocket, cell in
+				print(rocket.name)
+				cell.name = rocket.name
+				cell.firstFlight = rocket.firstFlight
+			}
+			.disposed(by: _disposeBag)
 	}
 }

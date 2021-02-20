@@ -1,0 +1,6 @@
+framework module Pods_RocketpediaTests {
+  umbrella header "Pods-RocketpediaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
