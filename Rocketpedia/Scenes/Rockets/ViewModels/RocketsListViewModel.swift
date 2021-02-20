@@ -5,9 +5,9 @@
 //  Created by Mary Salemme on 19/02/2021.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
+import Alamofire
 
 protocol RocketsListViewModelInputType {
 	func viewDidAppear()
@@ -52,11 +52,16 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 	}
 	
 	private func fetchRockets() {
-		_rockets.accept([Rocket(name: "Foo", firstFlight: "2006-03-24"), Rocket(name: "Bar", firstFlight: "2006-03-24"), Rocket(name: "Joe", firstFlight: "2006-03-24")])
+		let request = AF.request("https://api.spacexdata.com/v4/rockets")
+		
+		request.responseDecodable(of: [Rocket].self) { [weak self] (response) in
+			switch response.result {
+				case .success(let rockets):
+					self?._rockets.accept(rockets)
+				case .failure(let error):
+					assertionFailure("Error: \(error) when trying to fetch rockets")
+					return
+			}
+		}
 	}
-}
-
-struct Rocket {
-	let name: String
-	let firstFlight: String
 }

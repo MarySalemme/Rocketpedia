@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02E5031E52E27A4759C377A5 /* Pods_Rocketpedia_RocketpediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41CD102381D9979C0586621 /* Pods_Rocketpedia_RocketpediaUITests.framework */; };
 		1A9D5F6525E137BB00FBF408 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D5F6425E137BB00FBF408 /* RocketCell.swift */; };
+		1A9D5F6B25E1956C00FBF408 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D5F6A25E1956C00FBF408 /* Rocket.swift */; };
 		1AA3F19625E03157000B85EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F19525E03157000B85EC /* AppDelegate.swift */; };
 		1AA3F19825E03157000B85EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F19725E03157000B85EC /* SceneDelegate.swift */; };
 		1AA3F19A25E03157000B85EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3F19925E03157000B85EC /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		164423AEE13D82C148F7F789 /* Pods-Rocketpedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocketpedia.release.xcconfig"; path = "Target Support Files/Pods-Rocketpedia/Pods-Rocketpedia.release.xcconfig"; sourceTree = "<group>"; };
 		1A9D5F6425E137BB00FBF408 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
+		1A9D5F6A25E1956C00FBF408 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		1AA3F19225E03157000B85EC /* Rocketpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocketpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3F19525E03157000B85EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA3F19725E03157000B85EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A9D5F6925E1956000FBF408 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A9D5F6A25E1956C00FBF408 /* Rocket.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1AA3F18925E03157000B85EC = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		1AA3F19425E03157000B85EC /* Rocketpedia */ = {
 			isa = PBXGroup;
 			children = (
+				1A9D5F6925E1956000FBF408 /* Models */,
 				1AA3F1D825E03B58000B85EC /* Scenes */,
 				1AA3F19525E03157000B85EC /* AppDelegate.swift */,
 				1AA3F1CC25E032F8000B85EC /* AppCoordinator.swift */,
@@ -469,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9D5F6B25E1956C00FBF408 /* Rocket.swift in Sources */,
 				1AA3F1DD25E03BD6000B85EC /* RocketsListViewModel.swift in Sources */,
 				1AA3F19625E03157000B85EC /* AppDelegate.swift in Sources */,
 				1AA3F19825E03157000B85EC /* SceneDelegate.swift in Sources */,

@@ -9,6 +9,7 @@ target 'Rocketpedia' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxSwiftExt'
+  pod 'Alamofire'
 
   target 'RocketpediaTests' do
     inherit! :search_paths
