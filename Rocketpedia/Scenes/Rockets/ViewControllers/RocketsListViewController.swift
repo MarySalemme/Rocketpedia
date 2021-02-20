@@ -92,5 +92,20 @@ class RocketsListViewController: UIViewController {
 		viewModel.outputs.showLoading
 			.drive(activityIndicatorView.rx.isAnimating)
 			.disposed(by: _disposeBag)
+
+		Observable.combineLatest(viewModel.outputs.showError.asObservable(), viewModel.outputs.errorMessage.asObservable().unwrap())
+			.asObservable()
+			.subscribe(onNext: { [weak self] (showError, errorMessage) in
+				if showError {
+					self?.showAlert(error: errorMessage)
+				}
+			})
+			.disposed(by: _disposeBag)
+	}
+	
+	private func showAlert(error: String) {
+		let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+		alert.addAction(.init(title: "OK", style: .cancel, handler: .none))
+		self.present(alert, animated: true)
 	}
 }

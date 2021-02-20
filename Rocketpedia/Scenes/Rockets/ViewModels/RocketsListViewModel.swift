@@ -17,6 +17,8 @@ protocol RocketsListViewModelOutputType {
 	var title: Driver<String> { get }
 	var rockets: Driver<[Rocket]?> { get }
 	var showLoading: Driver<Bool> { get }
+	var showError: Driver<Bool> { get }
+	var errorMessage: Driver<String?> { get }
 }
 
 protocol RocketsListViewModelType {
@@ -53,22 +55,34 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 		return _showLoading.asDriver()
 	}
 	
+	private var _showError = BehaviorRelay<Bool>(value: false)
+	var showError: Driver<Bool> {
+		return _showError.asDriver()
+	}
+	
+	private var _errorMessage = BehaviorRelay<String?>(value: nil)
+	var errorMessage: Driver<String?> {
+		return _errorMessage.asDriver()
+	}
+	
 	init() {
 		print("RocketsListViewModel initialized")
 	}
 	
 	private func fetchRockets() {
 		_showLoading.accept(true)
-		let request = AF.request("https://api.spacexdata.com/v4/rockets")
+		let request = AF.request("https://api.spacexdata.com/v4/rocket")
 		request.responseDecodable(of: [Rocket].self) { [weak self] (response) in
 			switch response.result {
 				case .success(let rockets):
 					self?._rockets.accept(rockets)
+					self?._showLoading.accept(false)
 				case .failure(let error):
-					assertionFailure("Error: \(error) when trying to fetch rockets")
-					return
+					self?._showError.accept(true)
+					self?._errorMessage.accept(error.localizedDescription)
+					self?._showLoading.accept(false)
+					assertionFailure("Error: \(error.localizedDescription)")
 			}
-			self?._showLoading.accept(false)
 		}
 	}
 }
