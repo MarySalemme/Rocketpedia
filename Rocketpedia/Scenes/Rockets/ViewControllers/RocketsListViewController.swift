@@ -14,6 +14,8 @@ class RocketsListViewController: UIViewController {
 
 	// MARK: Subviews
 	
+	let activityIndicatorView: UIActivityIndicatorView
+	
 	let rocketsTableView: UITableView = {
 		let tableView = UITableView()
 		tableView.backgroundColor = UIColor.systemBackground
@@ -30,6 +32,7 @@ class RocketsListViewController: UIViewController {
 	// MARK: Initializers
 
 	init(viewModel: RocketsListViewModel) {
+		self.activityIndicatorView = UIActivityIndicatorView(style: .medium)
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
 		setupUI()
@@ -48,6 +51,7 @@ class RocketsListViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		viewModel.inputs.viewDidAppear()
+		activityIndicatorView.startAnimating()
 		super.viewDidAppear(animated)
 	}
 
@@ -56,6 +60,8 @@ class RocketsListViewController: UIViewController {
 		navigationController?.navigationBar.isTranslucent = false
 		rocketsTableView.register(RocketCell.self, forCellReuseIdentifier: "RocketCell")
 		view.addSubview(rocketsTableView)
+		activityIndicatorView.center = self.view.center
+		view.addSubview(activityIndicatorView)
 	}
 	
 	func setupConstraints() {
@@ -78,10 +84,13 @@ class RocketsListViewController: UIViewController {
 			.unwrap()
 			.drive(rocketsTableView.rx.items(cellIdentifier: RocketCell.reuseIdentifier, cellType: RocketCell.self)) {
 				_, rocket, cell in
-				print(rocket.name)
 				cell.name = rocket.name
 				cell.firstFlight = rocket.firstFlight
 			}
+			.disposed(by: _disposeBag)
+		
+		viewModel.outputs.showLoading
+			.drive(activityIndicatorView.rx.isAnimating)
 			.disposed(by: _disposeBag)
 	}
 }

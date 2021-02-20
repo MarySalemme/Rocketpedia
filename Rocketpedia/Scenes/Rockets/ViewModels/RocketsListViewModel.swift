@@ -16,6 +16,7 @@ protocol RocketsListViewModelInputType {
 protocol RocketsListViewModelOutputType {
 	var title: Driver<String> { get }
 	var rockets: Driver<[Rocket]?> { get }
+	var showLoading: Driver<Bool> { get }
 }
 
 protocol RocketsListViewModelType {
@@ -47,13 +48,18 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 		return _rockets.asDriver()
 	}
 	
+	private var _showLoading = BehaviorRelay<Bool>(value: false)
+	var showLoading: Driver<Bool> {
+		return _showLoading.asDriver()
+	}
+	
 	init() {
 		print("RocketsListViewModel initialized")
 	}
 	
 	private func fetchRockets() {
+		_showLoading.accept(true)
 		let request = AF.request("https://api.spacexdata.com/v4/rockets")
-		
 		request.responseDecodable(of: [Rocket].self) { [weak self] (response) in
 			switch response.result {
 				case .success(let rockets):
@@ -62,6 +68,7 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 					assertionFailure("Error: \(error) when trying to fetch rockets")
 					return
 			}
+			self?._showLoading.accept(false)
 		}
 	}
 }
