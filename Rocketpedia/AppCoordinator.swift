@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol Coordinator {
 	func start()
@@ -23,11 +24,14 @@ class AppCoordinator: Coordinator {
 	func start() {
 		window.rootViewController = rootViewController
 		window.makeKeyAndVisible()
-		
-		let rocketsListViewModel = RocketsListViewModel()
+		let rocketsListViewModel = RocketsListViewModel(coordinator: self)
 		let rocketsListViewController = RocketsListViewController(viewModel: rocketsListViewModel)
-		
 		rootViewController.pushViewController(rocketsListViewController, animated: false)
 	}
-
+	
+	func rocketSelected(_ rocket: Rocket) {
+		let rocketDetailView = RocketDetailView(rocket: rocket)
+		let hostingController = UIHostingController(rootView: rocketDetailView)
+		rootViewController.pushViewController(hostingController, animated: false)
+	}
 }

@@ -101,6 +101,7 @@ class RocketCell: UITableViewCell {
 	func setupConstraints() {
 		NSLayoutConstraint.activate([
 			_imageView.widthAnchor.constraint(equalToConstant: 80),
+			_imageView.heightAnchor.constraint(equalToConstant: 80),
 			_imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
 			_imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
 			_imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),

@@ -38,7 +38,7 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 	}
 	
 	func rocketTapped(_ rocket: Rocket) {
-		print("Rocket tapped: \(rocket)")
+		coordinator.rocketSelected(rocket)
 	}
 	
 	var outputs: RocketsListViewModelOutputType {
@@ -70,7 +70,10 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 		return _errorMessage.asDriver()
 	}
 	
-	init() {
+	var coordinator: AppCoordinator
+	
+	init(coordinator: AppCoordinator) {
+		self.coordinator = coordinator
 		print("RocketsListViewModel initialized")
 	}
 	
