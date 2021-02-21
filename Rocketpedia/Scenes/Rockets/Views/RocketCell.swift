@@ -45,7 +45,7 @@ class RocketCell: UITableViewCell {
 				return
 			}
 			let attributes = [NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel]
-			self._firstFlightLabel.attributedText = NSAttributedString(string: "First fligth: \(String(describing: firstFlight))" , attributes: attributes)
+			self._firstFlightLabel.attributedText = NSAttributedString(string: "First fligth: \(String(describing: firstFlight).formatDate())" , attributes: attributes)
 		}
 	}
 	

@@ -17,7 +17,7 @@ struct RocketDetailView: View {
 			Text("Is active? \(rocket.active ? "YES" : "NO")")
 			Text("Country: \(rocket.country)").font(.system(size: 18, weight: .regular, design: .default))
 			Text(rocket.rocketDescription)
-			Text("First flight: \(rocket.firstFlight)")
+			Text("First flight: \(rocket.firstFlight.formatDate())")
 			Text("Cost per launch: \(rocket.costPerLaunch)$")
 			Spacer()
 		}.padding()
