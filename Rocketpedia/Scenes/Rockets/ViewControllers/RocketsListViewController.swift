@@ -16,12 +16,7 @@ class RocketsListViewController: UIViewController {
 	
 	let activityIndicatorView: UIActivityIndicatorView
 	
-	let rocketsTableView: UITableView = {
-		let tableView = UITableView()
-		tableView.backgroundColor = UIColor.systemBackground
-		tableView.translatesAutoresizingMaskIntoConstraints = false
-		return tableView
-	}()
+	let rocketsTableView: UITableView
 	
 	// MARK: Dependencies
 
@@ -33,12 +28,12 @@ class RocketsListViewController: UIViewController {
 
 	init(viewModel: RocketsListViewModel) {
 		self.activityIndicatorView = UIActivityIndicatorView(style: .medium)
+		self.rocketsTableView = UITableView()
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
 		setupUI()
 		setupConstraints()
 		setupBindings()
-		print("RocketsListViewController initialized")
 	}
 
 	required init?(coder: NSCoder) {
@@ -59,6 +54,9 @@ class RocketsListViewController: UIViewController {
 		navigationController?.navigationBar.isTranslucent = false
 		view.backgroundColor = .systemBackground
 		rocketsTableView.register(RocketCell.self, forCellReuseIdentifier: "RocketCell")
+		rocketsTableView.backgroundColor = UIColor.systemBackground
+		rocketsTableView.translatesAutoresizingMaskIntoConstraints = false
+		rocketsTableView.rowHeight = 120
 		view.addSubview(rocketsTableView)
 		activityIndicatorView.center = self.view.center
 		view.addSubview(activityIndicatorView)

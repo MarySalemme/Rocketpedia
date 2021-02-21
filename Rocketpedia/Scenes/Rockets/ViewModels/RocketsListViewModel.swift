@@ -74,7 +74,6 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 	
 	init(coordinator: AppCoordinator) {
 		self.coordinator = coordinator
-		print("RocketsListViewModel initialized")
 	}
 	
 	private func fetchRockets() {
