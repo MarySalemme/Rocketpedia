@@ -51,13 +51,13 @@ class RocketsListViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		viewModel.inputs.viewDidAppear()
-		activityIndicatorView.startAnimating()
 		super.viewDidAppear(animated)
 	}
 
 	func setupUI() {
 		navigationController?.navigationBar.backgroundColor = .systemBackground
 		navigationController?.navigationBar.isTranslucent = false
+		view.backgroundColor = .systemBackground
 		rocketsTableView.register(RocketCell.self, forCellReuseIdentifier: "RocketCell")
 		view.addSubview(rocketsTableView)
 		activityIndicatorView.center = self.view.center
@@ -86,6 +86,8 @@ class RocketsListViewController: UIViewController {
 				_, rocket, cell in
 				cell.name = rocket.name
 				cell.firstFlight = rocket.firstFlight
+				cell.imageUrl = rocket.flickrImages.first
+				cell.successRate = rocket.successRatePct
 			}
 			.disposed(by: _disposeBag)
 		

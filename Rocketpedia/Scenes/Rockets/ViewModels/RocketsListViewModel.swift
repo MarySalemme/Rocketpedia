@@ -71,7 +71,7 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 	
 	private func fetchRockets() {
 		_showLoading.accept(true)
-		let request = AF.request("https://api.spacexdata.com/v4/rocket")
+		let request = AF.request("https://api.spacexdata.com/v4/rockets")
 		request.responseDecodable(of: [Rocket].self) { [weak self] (response) in
 			switch response.result {
 				case .success(let rockets):
