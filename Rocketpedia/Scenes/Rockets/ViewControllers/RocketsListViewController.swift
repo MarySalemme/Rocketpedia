@@ -103,6 +103,12 @@ class RocketsListViewController: UIViewController {
 				}
 			})
 			.disposed(by: _disposeBag)
+		
+		rocketsTableView.rx.modelSelected(Rocket.self)
+			.bind(onNext: { [viewModel] (rocket) in
+				viewModel.inputs.rocketTapped(rocket)
+			})
+			.disposed(by: _disposeBag)
 	}
 	
 	private func showAlert(error: String) {

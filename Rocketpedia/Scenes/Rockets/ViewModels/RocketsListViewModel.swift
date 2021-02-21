@@ -11,6 +11,7 @@ import Alamofire
 
 protocol RocketsListViewModelInputType {
 	func viewDidAppear()
+	func rocketTapped(_ rocket: Rocket)
 }
 
 protocol RocketsListViewModelOutputType {
@@ -34,6 +35,10 @@ class RocketsListViewModel: RocketsListViewModelType, RocketsListViewModelInputT
 	
 	func viewDidAppear() {
 		fetchRockets()
+	}
+	
+	func rocketTapped(_ rocket: Rocket) {
+		print("Rocket tapped: \(rocket)")
 	}
 	
 	var outputs: RocketsListViewModelOutputType {
