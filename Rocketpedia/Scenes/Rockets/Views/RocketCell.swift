@@ -81,20 +81,25 @@ class RocketCell: UITableViewCell {
 		
 		_nameLabel.textAlignment = .left
 		_nameLabel.textColor = UIColor.white
-		_nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
 		_nameLabel.translatesAutoresizingMaskIntoConstraints = false
+		_nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+		_nameLabel.adjustsFontForContentSizeCategory = true
 		_nameLabel.numberOfLines = 0
 		contentView.addSubview(_nameLabel)
 		
 		_firstFlightLabel.textAlignment = .left
 		_firstFlightLabel.textColor = UIColor.white
 		_firstFlightLabel.translatesAutoresizingMaskIntoConstraints = false
+		_firstFlightLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+		_firstFlightLabel.adjustsFontForContentSizeCategory = true
 		_firstFlightLabel.numberOfLines = 0
 		contentView.addSubview(_firstFlightLabel)
 		
 		_successRateLabel.textAlignment = .left
 		_successRateLabel.textColor = UIColor.white
 		_successRateLabel.translatesAutoresizingMaskIntoConstraints = false
+		_successRateLabel.font = UIFont.preferredFont(forTextStyle: .body)
+		_successRateLabel.adjustsFontForContentSizeCategory = true
 		contentView.addSubview(_successRateLabel)
 	}
 

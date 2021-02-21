@@ -13,9 +13,9 @@ struct RocketDetailView: View {
     var body: some View {
 		VStack(alignment: .leading) {
 			UrlImageView(rocket.flickrImages.first ?? "")
-			getSuccessRate().font(.system(size: 18, weight: .bold, design: .default))
+			getSuccessRate()
 			Text("Is active? \(rocket.active ? "YES" : "NO")")
-			Text("Country: \(rocket.country)").font(.system(size: 18, weight: .regular, design: .default))
+			Text("Country: \(rocket.country)")
 			Text(rocket.rocketDescription)
 			Text("First flight: \(rocket.firstFlight.formatDate())")
 			Text("Cost per launch: \(rocket.costPerLaunch)$")
